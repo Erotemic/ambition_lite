@@ -5,13 +5,16 @@ lesson names exactly one or two other files; beginners do not need to learn
 what a renderer, sprite atlas or ECS is before writing an `if` statement.
 
 ```text
-                 keyboard                    editable LDtk-derived JSON
+          keyboard + SDL controller            editable LDtk-derived JSON
                     |                                   |
                     v                                   v
-         game.py (Pygame loop)  ---->  content.py (six rooms)
+              game.py / gamepad.py        content.py (six rooms)
                     |                                   |
                     v                                   v
-             InputFrame --------------> World.step()
+               controls.py ----------------> InputFrame
+                                                   |
+                                                   v
+                                               World.step()
                                             |
                              +--------------+-------------+
                              |              |             |
@@ -40,6 +43,10 @@ no command/event-sourcing protocol, rollback, or multiplayer authority.
 ## Readable boundaries
 
 - `settings.py`: numbers and a one-function enemy speed policy.
+- `controls.py`: the four Rust keyboard presets, input sampling, and
+  edge-triggered actions. It deliberately imports no Pygame.
+- `gamepad.py`: translates SDL-mapped controllers into simple named buttons.
+- `game.py`: Pygame event loop, pause state, F4 preset cycling, and rendering.
 - `world.py`: dataclasses for player, enemy, boss, coconut, bolt; the one `step`.
 - `ai.py`: small species grouping and chase/flier decisions.
 - `combat.py`: the active hitbox as one rectangle in one time window.
@@ -70,4 +77,5 @@ PYTHONPATH=src python -m pytest -q
 The gameplay tests assert consequences (movement, jump count, damage, phases,
 doors, geometry). They do **not** freeze teaching prose, HUD labels or art
 pixel values. For a live visual debugging session, use `F3` for hitboxes and
-`F2` for joints.
+`F2` for joints. `F4` cycles keyboard presets; no controller or
+window is required to test the input adapter.

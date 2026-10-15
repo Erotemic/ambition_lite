@@ -27,6 +27,8 @@ class InputFrame:
     interact: bool = False      # new press, doors
     up: bool = False
     down: bool = False
+    move_x: float | None = None  # optional analog movement (-1.0 to 1.0)
+    walk: bool = False           # Shift caps movement speed, not dash
 
 
 @dataclass
@@ -320,7 +322,8 @@ class World:
         p.invulnerable = max(0, p.invulnerable - dt)
         p.dash_cooldown = max(0, p.dash_cooldown - dt)
         p.shot_cooldown = max(0, p.shot_cooldown - dt)
-        horizontal = int(keys.right) - int(keys.left)
+        horizontal = (int(keys.right) - int(keys.left) if keys.move_x is None
+                      else clamp(keys.move_x, -1.0, 1.0))
         if horizontal:
             p.facing = 1 if horizontal > 0 else -1
         if keys.jump:
@@ -341,6 +344,9 @@ class World:
             p.dash_time = max(0, p.dash_time - dt)
             p.vx = p.facing * settings.DASH_SPEED
         else:
+            # Rust caps the movement axis at 0.5 for Shift+Move.
+            if keys.walk:
+                horizontal = clamp(horizontal, -settings.WALK_AXIS_CAP, settings.WALK_AXIS_CAP)
             p.vx = horizontal * settings.RUN_SPEED
         self._start_attack(keys)
         p.vy = min(settings.MAX_FALL_SPEED, p.vy + settings.GRAVITY * dt)

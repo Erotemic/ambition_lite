@@ -1,12 +1,15 @@
-"""One screen, one event loop, one simulation. This is deliberately boring."""
+"""One screen, one event loop, one simulation (with Rust-style controls)."""
 from __future__ import annotations
 
 import os
 import pygame
+
 from . import settings
 from .audio import Soundboard
+from .controls import ControlReader, KEY_NAMES
+from .gamepad import Gamepad
 from .graphics import Painter
-from .world import World, InputFrame
+from .world import World
 
 
 def run(args):
@@ -23,21 +26,33 @@ def run(args):
     painter = Painter()
     sounds = Soundboard(enabled=not args.mute)
     sounds.change_music('boss' if world.boss else 'primeval')
+
+    controls = ControlReader(args.controls)
+    # Query only keys declared by controls.py. Both shift keys mean "walk".
+    key_codes = {name: pygame.key.key_code(name) for name in KEY_NAMES if name != 'shift'}
+    pad = Gamepad()
     show_pose_lab = False
+    paused = False
     bones = list(painter.robot.rig.parents)
     selected = 0
     offsets: dict[str, float] = {}
     running = True
+
     while running:
         dt = min(1/20, clock.tick(settings.FPS) / 1000)
-        newly = set()
+        changed_preset = False
+        toggle_pause = False
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            elif event.type == pygame.KEYDOWN:
-                newly.add(event.key)
+            elif event.type == pygame.KEYDOWN and not getattr(event, 'repeat', False):
                 if event.key == pygame.K_ESCAPE:
+                    toggle_pause = True
+                elif event.key == pygame.K_q and paused and not show_pose_lab:
                     running = False
+                elif event.key == pygame.K_F4:
+                    controls.cycle_preset()
+                    changed_preset = True
                 elif event.key == pygame.K_F3:
                     painter.debug = not painter.debug
                 elif event.key == pygame.K_F2:
@@ -55,28 +70,32 @@ def run(args):
                         offsets[bones[selected]] = offsets.get(bones[selected], 0) - 5
                     elif event.key == pygame.K_RIGHTBRACKET:
                         offsets[bones[selected]] = offsets.get(bones[selected], 0) + 5
+            elif event.type == pygame.WINDOWFOCUSLOST:
+                paused = True
         if not running:
             break
+
         pressed = pygame.key.get_pressed()
-        if not show_pose_lab:
-            inp = InputFrame(
-                left=bool(pressed[pygame.K_a] or pressed[pygame.K_LEFT]),
-                right=bool(pressed[pygame.K_d] or pressed[pygame.K_RIGHT]),
-                up=bool(pressed[pygame.K_w] or pressed[pygame.K_UP]),
-                down=bool(pressed[pygame.K_s] or pressed[pygame.K_DOWN]),
-                jump=pygame.K_SPACE in newly,
-                dash=pygame.K_LSHIFT in newly or pygame.K_RSHIFT in newly,
-                light=pygame.K_j in newly,
-                heavy=pygame.K_k in newly,
-                fire=pygame.K_l in newly,
-                interact=pygame.K_e in newly,
-            )
-            world.step(dt, inp)
+        held_keys = {name for name, key_code in key_codes.items() if pressed[key_code]}
+        if pressed[pygame.K_LSHIFT] or pressed[pygame.K_RSHIFT]:
+            held_keys.add('shift')
+        sample = controls.sample(held_keys, pad.sample(),
+                                 suppress_edges=changed_preset)
+        if toggle_pause or sample.pause:
+            paused = not paused
+        if sample.reset and not show_pose_lab:
+            world.restart()
+            sounds.change_music('boss' if world.boss else 'primeval')
+
+        if not show_pose_lab and not paused:
+            world.step(dt, sample.frame)
             sounds.play(world.events)
             sounds.change_music('boss' if world.boss else 'primeval')
         painter.track(world, dt)
         painter.render(screen, world, pose_lab=show_pose_lab,
-                       pose_offsets=offsets, pose_bone=bones[selected])
+                       pose_offsets=offsets, pose_bone=bones[selected],
+                       control_preset=controls.preset, paused=paused,
+                       gamepad_connected=pad.connected)
         pygame.display.flip()
         if args.screenshot:
             pygame.image.save(screen, args.screenshot)

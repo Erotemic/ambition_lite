@@ -17,7 +17,8 @@ Run the game in the last room:
 python -m ambition_lite --room primeval_tyrant_hall
 ```
 
-Use `F3` while swinging (`J`, `W` + `J`, `S` + `J`, `K`). Note that the
+Use `F3` while swinging (`X`, `Up` + `X`, `Down` + `X`, `A` in the
+default Rust-style layout). Note that the
 yellow collision rectangle only exists while the move is **active**, not
 while it starts or recovers. In `world.py`, locate `_attack_step`.
 
@@ -33,4 +34,4 @@ What does the set `ActiveAttack.hit_ids` prevent? Why might a sword that
 stays active for three frames otherwise damage an enemy three times?
 
 **Challenge:** Add a `poke` move in the combat table and bind it to a new
-key in `game.py` and `_start_attack` in `world.py`.
+key in `controls.py` and `_start_attack` in `world.py`.

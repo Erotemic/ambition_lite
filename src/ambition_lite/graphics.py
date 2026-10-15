@@ -311,7 +311,8 @@ class Painter:
             color = (255, 122, 88) if kind == 'player_hit' else (247, 227, 123)
             text(screen, self.font, label, (x,y), color, center=True)
 
-    def _hud(self, screen, world, *, pose_lab=False, pose_bone=''):
+    def _hud(self, screen, world, *, pose_lab=False, pose_bone='',
+             control_preset=None, paused=False, gamepad_connected=False):
         top = pygame.Surface((self.width, 67), pygame.SRCALPHA)
         top.fill((15, 30, 28, 220))
         screen.blit(top, (0, 0))
@@ -332,15 +333,19 @@ class Painter:
             pygame.draw.rect(screen, (56, 47, 38), (bx, 76, total, 14), border_radius=5)
             pygame.draw.rect(screen, (222, 125, 78), (bx, 76, int(total * b.hp/b.max_hp), 14), border_radius=5)
             text(screen, self.small, f'T-REX  {b.hp}/{b.max_hp}  / PHASE {b.phase}', (bx + total//2, 101), center=True)
-        bottom = pygame.Surface((self.width, 36), pygame.SRCALPHA)
+        bottom = pygame.Surface((self.width, 56), pygame.SRCALPHA)
         bottom.fill((12, 30, 30, 215))
-        screen.blit(bottom, (0, self.height - 36))
-        text(screen, self.small,
-             'A / D move   SPACE jump x2   SHIFT dash   J slash/coconut   K smash   L bolt   E door   F2 pose lab',
-             (17, self.height - 28))
+        screen.blit(bottom, (0, self.height - 56))
+        if control_preset is not None:
+            text(screen, self.small, control_preset.summary, (15, self.height - 49))
+            text(screen, self.small, control_preset.help_line, (15, self.height - 26),
+                 (184, 217, 199))
+            if gamepad_connected:
+                text(screen, self.small, 'PAD', (self.width - 54, 13), (144, 224, 196))
         door = world.nearby_door()
         if door and not pose_lab:
-            hint = 'E   ENTER  ' + door['target'].replace('primeval_', '').replace('_', ' ').upper()
+            key = control_preset.interact.upper() if control_preset else 'F'
+            hint = key + '   ENTER  ' + door['target'].replace('primeval_', '').replace('_', ' ').upper()
             text(screen, self.font, hint, (self.width // 2, self.height - 80), (217, 249, 185), center=True)
         if pose_lab:
             msg = 'POSE LAB: TAB select joint  [ / ] rotate  R reset  F2 resume'
@@ -348,7 +353,8 @@ class Painter:
             text(screen, self.font, msg, (235, 134), (220, 245, 185))
             text(screen, self.font, 'Selected: ' + pose_bone, (235, 166), (142, 233, 244))
 
-    def render(self, screen, world, *, pose_lab=False, pose_offsets=None, pose_bone=''):
+    def render(self, screen, world, *, pose_lab=False, pose_offsets=None, pose_bone='',
+               control_preset=None, paused=False, gamepad_connected=False):
         self._background(screen, world)
         self._terrain(screen, world)
         self._items(screen, world)
@@ -358,7 +364,9 @@ class Painter:
         self._boss(screen, world)
         self._robot(screen, world, pose_lab=pose_lab, pose_offsets=pose_offsets)
         self._fx(screen)
-        self._hud(screen, world, pose_lab=pose_lab, pose_bone=pose_bone)
+        self._hud(screen, world, pose_lab=pose_lab, pose_bone=pose_bone,
+                  control_preset=control_preset, paused=paused,
+                  gamepad_connected=gamepad_connected)
         if world.won or world.game_over:
             overlay = pygame.Surface((self.width, self.height), pygame.SRCALPHA)
             overlay.fill((10, 22, 24, 195))
@@ -370,3 +378,11 @@ class Painter:
             else:
                 text(screen, self.big, 'ROBOT DOWN', (self.width//2, 220), (242, 168, 130), center=True)
                 text(screen, self.font, 'R: retry this room', (self.width//2, 284), center=True)
+        if paused and not pose_lab:
+            dim = pygame.Surface((self.width, self.height), pygame.SRCALPHA)
+            dim.fill((12, 24, 26, 165))
+            screen.blit(dim, (0, 0))
+            text(screen, self.big, 'PAUSED', (self.width // 2, 200),
+                 (232, 245, 219), center=True)
+            text(screen, self.font, 'ESC / START resume    Q quit    F4 keyboard preset',
+                 (self.width // 2, 270), center=True)

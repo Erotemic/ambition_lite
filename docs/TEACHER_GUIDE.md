@@ -23,6 +23,10 @@ commands work with Python alone using `PYTHONPATH=src`; audio and SVG editing
 are optional. `pytest` is a developer dependency for regression checks,
 not a requirement for an introductory lesson.
 
+The default controls mirror Rust (Arrows + Z/X/C); `F4` cycles to WASD
+for students who prefer it. Students can inspect `controls.py` to see how
+physical keys become abstract actions without modifying the game rules.
+
 Students should keep original JSON and SVG files in version control so
 experiments can be reverted. The T-rex may take several tries to defeat:
 teachers can reduce its HP in `settings.py` during a short class.

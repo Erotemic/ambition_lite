@@ -24,7 +24,8 @@ velocity is in pixels per second while `dt` is in seconds per frame.
 ## Modify
 
 Set `JUMP_SPEED = 600`, rerun the same command, and compare positions.
-To see it, run `python -m ambition_lite` and jump onto the first ledge.
+To see it, run `python -m ambition_lite` and press `Z` to jump onto the first ledge
+(or `F4` to switch to the WASD/Space layout).
 
 ## Explain
 

@@ -6,6 +6,7 @@ meaning in the game. Try changing one value, make a prediction, then play.
 
 # Movement (world pixels and seconds)
 RUN_SPEED = 290.0
+WALK_AXIS_CAP = 0.5  # Rust Shift+Move movement cap
 JUMP_SPEED = 515.0
 DOUBLE_JUMP_SPEED = 490.0
 GRAVITY = 1100.0

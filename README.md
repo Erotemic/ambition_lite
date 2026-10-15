@@ -22,22 +22,47 @@ Alternative installed command: `ambition-lite`. Run a specific room with
 `python -m ambition_lite --screenshot screenshots/scene.png` (create the output
 folder first).
 
-### Controls
+### Controls (Ambition's Rust defaults)
 
-| Key | Action |
-|---|---|
-| `A` / `D` or left/right arrows | Run |
-| `Space` | Jump, then double jump |
-| `Shift` | Dash in the direction you face |
-| `J` | Directional sword slash; pick up / throw nearby coconuts |
-| `W`+`J` / `S`+`J` | Upward / downward slash |
-| `K` | Heavy forward smash |
-| `L` | Shoot a small bolt (`W`+`L` to angle it up) |
-| `E` | Use a glowing door at either end of the room |
-| `R` | Restart the current room |
-| `F2` | Pause and inspect pose joints: `Tab` select, `[` / `]` rotate, `R` reset |
-| `F3` | Show collision boxes |
-| `Esc` | Quit |
+The initial keyboard layout is **Arrows + Z/X/C**, matching the first
+`KeyboardPreset` in Ambition's `ambition_input/src/presets.rs`. Press `F4` to
+cycle between Rust's four keyboard presets at any time. To start directly
+with the WASD layout:
+
+```bash
+python -m ambition_lite --controls wasd
+```
+
+| Action | Default: Arrows + Z/X/C | WASD + Space/J/K/L |
+|---|---|---|
+| Move / aim | Arrow keys | W/A/S/D |
+| Jump / double jump | `Z` | `Space` |
+| Directional sword attack / coconut | `X` | `J` |
+| Dash / burst | `C` | `K` |
+| Heavy smash | `A` | `L` |
+| Fire bolt | `V` | `H` |
+| Enter door | `F` | `E` |
+| Walk | Hold either `Shift` key | Hold either `Shift` key |
+
+Hold `Up` + attack to swing upward, or `Down` + attack to swing downward;
+for example `Up+X` with the default layout. The heavy attack uses **the
+Rust secondary/Blink key**, repurposed for Lite because Blink is not included.
+Shift *walks* in Rust; it no longer triggers dash here. The other Rust
+keyboard presets are **Arrows + Q/W/E/R** (`qwer`) and **WASD + U/I/P/O**
+(`uipo`), also selectable with `--controls` or `F4`.
+
+An SDL-mapped controller uses Ambition's default gamepad layout for shared
+actions: **left stick / D-pad** move, **South/A** jump, **West/X** attack,
+**Right trigger/RT** dash, **North/Y** projectile, **Right shoulder/RB** door,
+**Start** pause, **Back/Select** reset. **East/B** is Lite's heavy attack in
+place of the omitted Blink. Analog stick tilt allows walking. Controller
+support uses Pygame's SDL mapping for standard Xbox/PlayStation-style pads;
+unmapped joysticks are not assigned guessed button numbers.
+
+`R` restarts the current room, `F2` opens the Pose Lab (`Tab` select,
+`[` / `]` rotate, `R` reset pose), `F3` toggles collision boxes, and
+`Esc` pauses/resumes. While paused, press `Q` to quit, or close the window.
+The bottom-of-screen instructions update when you switch presets.
 
 Defeat the T-rex in the last room. Rooms are long, and the camera scrolls.
 The game uses the **actual LDtk solid/one-way collision map** for each of the
@@ -54,6 +79,7 @@ The shortest path is:
 2. `lessons/02_enemy_ai.md` — make a dinosaur react to the player's position.
 3. `lessons/03_combat.md` — adjust slash startup, reach, and damage.
 4. `lessons/04_pose_and_assets.md` — pose real articulated SVG robot limbs.
+5. `lessons/05_input_mapping.md` — optional activity: map physical keys to game actions.
 
 Read `docs/ARCHITECTURE.md` for a guided map of the code. Every exercise has a
 **Predict → Investigate → Modify → Explain** loop and a concrete command. The

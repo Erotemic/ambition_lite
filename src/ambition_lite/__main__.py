@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 from .content import ROOMS
+from .controls import PRESET_BY_NAME, DEFAULT_PRESET
 
 
 def main(argv=None):
@@ -16,6 +17,8 @@ def main(argv=None):
     parser.add_argument('--frames', type=int, default=120, help='number of frames in a headless demonstration')
     parser.add_argument('--trace', action='store_true', help='print new game events from headless simulation')
     parser.add_argument('--mute', action='store_true', help='play without generated music or effects')
+    parser.add_argument('--controls', choices=tuple(PRESET_BY_NAME), default=DEFAULT_PRESET,
+                        help='Rust-style keyboard preset (can also cycle with F4)')
     parser.add_argument('--screenshot', metavar='PNG', help='save one Pygame frame then exit')
     args = parser.parse_args(argv)
     if args.headless:
