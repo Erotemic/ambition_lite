@@ -7,20 +7,33 @@ networking, Android build, or professional audio software in the runtime.
 
 ## Start playing
 
-Python 3.10+ and an ordinary Linux/Windows/macOS desktop:
+Open a terminal in this repository and run:
 
 ```bash
-python -m venv .venv
-. .venv/bin/activate
-python -m pip install -e .
-python -m ambition_lite
+python main.py
 ```
 
-Alternative installed command: `ambition-lite`. Run a specific room with
-`python -m ambition_lite --room primeval_canopy`. To play with no audio, add
-`--mute`. An optional screenshot command for classroom bug reports is
-`python -m ambition_lite --screenshot screenshots/scene.png` (create the output
-folder first).
+**No editable install, `PYTHONPATH`, or virtualenv activation is necessary.**
+On the first graphical launch, `main.py` checks for Pygame. If it is missing,
+it creates a project-local `.venv`, installs `pygame-ce` there, and starts the
+game. This one-time setup requires internet access and Python 3.10+ with venv
+support; later launches reuse the installation. Nothing is installed into the
+system Python. On Linux, `python3 main.py` works if `python` is not defined.
+
+Launch options use the same simple command:
+
+```bash
+python main.py --room primeval_canopy
+python main.py --controls wasd
+python main.py --mute
+python main.py --headless --frames 360 --trace
+python main.py --help
+```
+
+Headless mode and `--help` work **without Pygame or network access**. For a
+screenshot, run `python main.py --screenshot screenshots/scene.png` after
+creating the output folder. You can still use `python -m ambition_lite` or
+`ambition-lite` after manually installing the package, but they are optional.
 
 ### Controls (Ambition's Rust defaults)
 
@@ -30,7 +43,7 @@ cycle between Rust's four keyboard presets at any time. To start directly
 with the WASD layout:
 
 ```bash
-python -m ambition_lite --controls wasd
+python main.py --controls wasd
 ```
 
 | Action | Default: Arrows + Z/X/C | WASD + Space/J/K/L |
@@ -86,7 +99,7 @@ Read `docs/ARCHITECTURE.md` for a guided map of the code. Every exercise has a
 simulation can run without Pygame, including in a classroom autograder:
 
 ```bash
-PYTHONPATH=src python -m ambition_lite --headless --frames 360 --trace
+python main.py --headless --frames 360 --trace
 python -m pip install pytest  # if you want to run the tests
 python -m pytest -q
 ```

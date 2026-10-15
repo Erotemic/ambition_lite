@@ -10,7 +10,7 @@ happens if you change the classic attack key from `x` to `b`.
 
 ## Investigate
 
-Run `python -m ambition_lite`. Use `F4` to switch between the classic
+Run `python main.py`. Use `F4` to switch between the classic
 and WASD presets. Watch how the bottom HUD and the door prompt update. Press
 an attack key, hold it, release it, then press it again. Why is this
 one attack per *new press*, instead of 60 attacks per second?

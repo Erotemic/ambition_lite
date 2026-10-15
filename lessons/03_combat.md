@@ -14,7 +14,7 @@ which defeats a 6-HP dinosaur in fewer hits.
 Run the game in the last room:
 
 ```bash
-python -m ambition_lite --room primeval_tyrant_hall
+python main.py --room primeval_tyrant_hall
 ```
 
 Use `F3` while swinging (`X`, `Up` + `X`, `Down` + `X`, `A` in the

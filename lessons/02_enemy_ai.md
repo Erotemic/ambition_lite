@@ -12,7 +12,7 @@ the returned horizontal speed have? What happens when the player stands
 ## Investigate
 
 ```bash
-PYTHONPATH=src python -m ambition_lite --headless --room primeval_canopy --frames 240 --trace
+python main.py --headless --room primeval_canopy --frames 240 --trace
 ```
 
 Play the same room and enable `F3` to see the hitboxes. Compare a flyer

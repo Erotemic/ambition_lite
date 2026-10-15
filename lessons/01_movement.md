@@ -14,7 +14,7 @@ to 600. Predict the effect of doubling gravity.
 Run from the repository root (no Pygame needed):
 
 ```bash
-PYTHONPATH=src python -m ambition_lite --headless --frames 160 --trace
+python main.py --headless --frames 160 --trace
 ```
 
 The trace prints the first jump, the second jump, and the player's final
@@ -24,7 +24,7 @@ velocity is in pixels per second while `dt` is in seconds per frame.
 ## Modify
 
 Set `JUMP_SPEED = 600`, rerun the same command, and compare positions.
-To see it, run `python -m ambition_lite` and press `Z` to jump onto the first ledge
+To see it, run `python main.py` and press `Z` to jump onto the first ledge
 (or `F4` to switch to the WASD/Space layout).
 
 ## Explain

@@ -18,9 +18,10 @@ understandable edits. It does not ask beginners to replace the engine.
 
 ## Preparation
 
-Run `python -m pip install -e .` on classroom machines. The headless lesson
-commands work with Python alone using `PYTHONPATH=src`; audio and SVG editing
-are optional. `pytest` is a developer dependency for regression checks,
+Run `python main.py` from the repo root on classroom machines. On first
+graphical launch it installs Pygame into a local `.venv` (internet required
+once); later launches reuse it. The `python main.py --headless` lesson
+commands work offline with Python alone. Audio and SVG editing are optional. `pytest` is a developer dependency for regression checks,
 not a requirement for an introductory lesson.
 
 The default controls mirror Rust (Arrows + Z/X/C); `F4` cycles to WASD

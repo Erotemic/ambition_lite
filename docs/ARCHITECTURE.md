@@ -1,6 +1,8 @@
 # A one-page map of the game
 
-The primary student entry point is `src/ambition_lite/settings.py`. Each
+Students run `python main.py` at the repo root; the launcher handles the local
+source path and optional first-run Pygame setup. The primary file for students
+to edit is `src/ambition_lite/settings.py`. Each
 lesson names exactly one or two other files; beginners do not need to learn
 what a renderer, sprite atlas or ECS is before writing an `if` statement.
 
@@ -70,7 +72,7 @@ dependencies.
 ## Debug without a window
 
 ```bash
-PYTHONPATH=src python -m ambition_lite --headless --room primeval_rookery --trace --frames 240
+python main.py --headless --room primeval_rookery --trace --frames 240
 PYTHONPATH=src python -m pytest -q
 ```
 
