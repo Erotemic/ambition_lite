@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="512mm" height="512mm" viewBox="0 0 512 512"
+     data-character-design="kiwi-side">
+  <!-- The kiwi, side view facing right, on a 512x512 drawing whose ground is
+       y=416 (published at 0.25). Each part is a layer with a data-rig-part name;
+       rigged/kiwi/ turns them about their joints. The eye has open / angry / shut
+       / dead. The hidden Rig Joints layer marks every joint. -->
+  <g id="kiwi-side" inkscape:groupmode="layer" inkscape:label="Kiwi - Side Right">
+    <g id="tail" inkscape:groupmode="layer" inkscape:label="Tail" data-rig-part="tail" data-rig-bone="tail" data-rig-z="10">
+      <path d="M170,364 C170,364 156.61,356.67 156.61,356.67 C156.61,356.67 168.06,352.38 168.06,352.38 C168.06,352.38 152.47,345.42 152.47,345.42 C152.47,345.42 166.13,340.75 166.13,340.75 C166.13,340.75 164.2,327.62 164.2,327.62 C164.2,327.62 172.77,331.3 172.77,331.3 C172.77,331.3 167.71,315.43 167.71,315.43 C167.71,315.43 180,322 180,322 C180,322 187.89,328.14 187.89,328.14 C187.89,328.14 180.66,337.44 180.66,337.44 C180.66,337.44 175.99,339.11 175.99,339.11 C175.99,339.11 177.93,350.73 177.93,350.73 C177.93,350.73 179.86,362.36 179.86,362.36 C179.86,362.36 170,364 170,364 Z" fill="#684c32" stroke="#1d1418" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="far-leg-u" inkscape:groupmode="layer" inkscape:label="Thigh - far" data-rig-part="far_leg_u" data-rig-bone="far_leg_u" data-rig-z="18">
+      <clipPath id="clip-far-thigh"><path d="M210.83,356.82 L213.7,353.1 L217.57,350.45 L222.07,349.12 L226.76,349.26 L231.18,350.83 L234.9,353.7 L237.55,357.57 L238.88,362.07 L238.74,366.76 L237.17,371.18 L219.02,389.83 L217.5,391.81 L215.43,393.23 L213.03,393.93 L210.53,393.86 L208.17,393.02 L206.19,391.5 L204.77,389.43 L204.07,387.03 L204.14,384.53 L204.98,382.17 Z" /></clipPath>
+      <g clip-path="url(#clip-far-thigh)">
+      <path d="M210.83,356.82 L213.7,353.1 L217.57,350.45 L222.07,349.12 L226.76,349.26 L231.18,350.83 L234.9,353.7 L237.55,357.57 L238.88,362.07 L238.74,366.76 L237.17,371.18 L219.02,389.83 L217.5,391.81 L215.43,393.23 L213.03,393.93 L210.53,393.86 L208.17,393.02 L206.19,391.5 L204.77,389.43 L204.07,387.03 L204.14,384.53 L204.98,382.17 Z" fill="#684c32" />
+      <path d="M218,368 C216.33,370.67 209.67,381.33 208,384" fill="none" stroke="#46321f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+      </g>
+      <path d="M210.83,356.82 L213.7,353.1 L217.57,350.45 L222.07,349.12 L226.76,349.26 L231.18,350.83 L234.9,353.7 L237.55,357.57 L238.88,362.07 L238.74,366.76 L237.17,371.18 L219.02,389.83 L217.5,391.81 L215.43,393.23 L213.03,393.93 L210.53,393.86 L208.17,393.02 L206.19,391.5 L204.77,389.43 L204.07,387.03 L204.14,384.53 L204.98,382.17 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="far-leg-l" inkscape:groupmode="layer" inkscape:label="Shank - far" data-rig-part="far_leg_l" data-rig-bone="far_leg_l" data-rig-z="18">
+      <clipPath id="clip-far-shank"><path d="M207.52,389.99 L206.5,388.41 L206.03,386.59 L206.14,384.72 L206.82,382.97 L208.01,381.52 L209.59,380.5 L211.41,380.03 L213.28,380.14 L215.03,380.82 L216.48,382.01 L232.11,400.35 L233.04,401.8 L233.47,403.46 L233.37,405.18 L232.75,406.78 L231.65,408.11 L230.2,409.04 L228.54,409.47 L226.82,409.37 L225.22,408.75 L223.89,407.65 Z" /></clipPath>
+      <g clip-path="url(#clip-far-shank)">
+      <path d="M207.52,389.99 L206.5,388.41 L206.03,386.59 L206.14,384.72 L206.82,382.97 L208.01,381.52 L209.59,380.5 L211.41,380.03 L213.28,380.14 L215.03,380.82 L216.48,382.01 L232.11,400.35 L233.04,401.8 L233.47,403.46 L233.37,405.18 L232.75,406.78 L231.65,408.11 L230.2,409.04 L228.54,409.47 L226.82,409.37 L225.22,408.75 L223.89,407.65 Z" fill="#8a6a40" />
+      <path d="M207,390 C208.67,389.83 215.33,389.17 217,389" fill="none" stroke="#3a2a1a" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M207.2,394 C208.87,393.83 215.53,393.17 217.2,393" fill="none" stroke="#3a2a1a" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M207.4,398 C209.07,397.83 215.73,397.17 217.4,397" fill="none" stroke="#3a2a1a" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M207.6,402 C209.27,401.83 215.93,401.17 217.6,401" fill="none" stroke="#3a2a1a" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      </g>
+      <path d="M207.52,389.99 L206.5,388.41 L206.03,386.59 L206.14,384.72 L206.82,382.97 L208.01,381.52 L209.59,380.5 L211.41,380.03 L213.28,380.14 L215.03,380.82 L216.48,382.01 L232.11,400.35 L233.04,401.8 L233.47,403.46 L233.37,405.18 L232.75,406.78 L231.65,408.11 L230.2,409.04 L228.54,409.47 L226.82,409.37 L225.22,408.75 L223.89,407.65 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="far-foot" inkscape:groupmode="layer" inkscape:label="Foot - far" data-rig-part="far_foot" data-rig-bone="far_foot" data-rig-z="20">
+      <path d="M224.75,400.75 L225.91,399.9 L227.28,399.46 L228.72,399.46 L230.09,399.9 L231.25,400.75 L232.1,401.91 L232.54,403.28 L232.54,404.72 L232.1,406.09 L231.25,407.25 L221.26,415.26 L220.45,415.85 L219.5,416.16 L218.5,416.16 L217.55,415.85 L216.74,415.26 L216.15,414.45 L215.84,413.5 L215.84,412.5 L216.15,411.55 L216.74,410.74 Z" fill="#8a6a40" />
+      <path d="M224.75,400.75 L225.91,399.9 L227.28,399.46 L228.72,399.46 L230.09,399.9 L231.25,400.75 L232.1,401.91 L232.54,403.28 L232.54,404.72 L232.1,406.09 L231.25,407.25 L221.26,415.26 L220.45,415.85 L219.5,416.16 L218.5,416.16 L217.55,415.85 L216.74,415.26 L216.15,414.45 L215.84,413.5 L215.84,412.5 L216.15,411.55 L216.74,410.74 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M220,411 C219,411.5 214.33,412.67 214,414 C213.67,415.33 217.33,418.17 218,419" fill="none" stroke="#3a2a1a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M225.01,407.49 L224.07,406.4 L223.53,405.07 L223.41,403.63 L223.75,402.23 L224.51,401.01 L225.6,400.07 L226.93,399.53 L228.37,399.41 L229.77,399.75 L230.99,400.51 L244.08,413.57 L244.73,414.33 L245.11,415.26 L245.19,416.26 L244.95,417.23 L244.43,418.08 L243.67,418.73 L242.74,419.11 L241.74,419.19 L240.77,418.95 L239.92,418.43 Z" fill="#8a6a40" />
+      <path d="M225.01,407.49 L224.07,406.4 L223.53,405.07 L223.41,403.63 L223.75,402.23 L224.51,401.01 L225.6,400.07 L226.93,399.53 L228.37,399.41 L229.77,399.75 L230.99,400.51 L244.08,413.57 L244.73,414.33 L245.11,415.26 L245.19,416.26 L244.95,417.23 L244.43,418.08 L243.67,418.73 L242.74,419.11 L241.74,419.19 L240.77,418.95 L239.92,418.43 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M241,414 C242,414.5 246.67,415.67 247,417 C247.33,418.33 243.67,421.17 243,422" fill="none" stroke="#3a2a1a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M226.6,408.38 L225.31,407.73 L224.29,406.72 L223.63,405.44 L223.4,404.02 L223.62,402.6 L224.27,401.31 L225.28,400.29 L226.56,399.63 L227.98,399.4 L229.4,399.62 L253.98,408.95 L254.87,409.4 L255.58,410.11 L256.04,411 L256.2,411.99 L256.05,412.98 L255.6,413.87 L254.89,414.58 L254,415.04 L253.01,415.2 L252.02,415.05 Z" fill="#8a6a40" />
+      <path d="M226.6,408.38 L225.31,407.73 L224.29,406.72 L223.63,405.44 L223.4,404.02 L223.62,402.6 L224.27,401.31 L225.28,400.29 L226.56,399.63 L227.98,399.4 L229.4,399.62 L253.98,408.95 L254.87,409.4 L255.58,410.11 L256.04,411 L256.2,411.99 L256.05,412.98 L255.6,413.87 L254.89,414.58 L254,415.04 L253.01,415.2 L252.02,415.05 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M252,410 C253,410.5 257.67,411.67 258,413 C258.33,414.33 254.67,417.17 254,418" fill="none" stroke="#3a2a1a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="near-leg-u" inkscape:groupmode="layer" inkscape:label="Thigh - near" data-rig-part="near_leg_u" data-rig-bone="near_leg_u" data-rig-z="26">
+      <clipPath id="clip-near-thigh"><path d="M241.14,358.28 L244.15,354.69 L248.13,352.2 L252.68,351.06 L257.37,351.38 L261.72,353.14 L265.31,356.15 L267.8,360.13 L268.94,364.68 L268.62,369.37 L266.86,373.72 L248.86,390.12 L247.25,392.03 L245.13,393.36 L242.7,393.97 L240.21,393.8 L237.88,392.86 L235.97,391.25 L234.64,389.13 L234.03,386.7 L234.2,384.21 L235.14,381.88 Z" /></clipPath>
+      <g clip-path="url(#clip-near-thigh)">
+      <path d="M241.14,358.28 L244.15,354.69 L248.13,352.2 L252.68,351.06 L257.37,351.38 L261.72,353.14 L265.31,356.15 L267.8,360.13 L268.94,364.68 L268.62,369.37 L266.86,373.72 L248.86,390.12 L247.25,392.03 L245.13,393.36 L242.7,393.97 L240.21,393.8 L237.88,392.86 L235.97,391.25 L234.64,389.13 L234.03,386.7 L234.2,384.21 L235.14,381.88 Z" fill="#8c6a48" />
+      <path d="M248,370 C246.33,372.33 239.67,381.67 238,384" fill="none" stroke="#46321f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+      </g>
+      <path d="M241.14,358.28 L244.15,354.69 L248.13,352.2 L252.68,351.06 L257.37,351.38 L261.72,353.14 L265.31,356.15 L267.8,360.13 L268.94,364.68 L268.62,369.37 L266.86,373.72 L248.86,390.12 L247.25,392.03 L245.13,393.36 L242.7,393.97 L240.21,393.8 L237.88,392.86 L235.97,391.25 L234.64,389.13 L234.03,386.7 L234.2,384.21 L235.14,381.88 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="body" inkscape:groupmode="layer" inkscape:label="Body" data-rig-part="body" data-rig-bone="body" data-rig-z="30">
+      <path d="M302,344 C302,344 304.77,361.35 304.77,361.35 C304.77,361.35 292.77,355.53 292.77,355.53 C292.77,355.53 297.44,374.39 297.44,374.39 C297.44,374.39 283.55,367.06 283.55,367.06 C283.55,367.06 283.8,382.39 283.8,382.39 C283.8,382.39 274.32,378.59 274.32,378.59 C274.32,378.59 267.16,399.4 267.16,399.4 C267.16,399.4 262.23,385.06 262.23,385.06 C262.23,385.06 252.37,400.25 252.37,400.25 C252.37,400.25 247.59,387.06 247.59,387.06 C247.59,387.06 237.26,398.71 237.26,398.71 C237.26,398.71 232.96,389.05 232.96,389.05 C232.96,389.05 216.17,403.58 216.17,403.58 C216.17,403.58 218.69,387.44 218.69,387.44 C218.69,387.44 203.66,394.64 203.66,394.64 C203.66,394.64 204.75,382.56 204.75,382.56 C204.75,382.56 189.78,389.6 189.78,389.6 C189.78,389.6 190.82,377.69 190.82,377.69 C190.82,377.69 168.61,377.61 168.61,377.61 C168.61,377.61 181.48,367.46 181.48,367.46 C181.48,367.46 166.89,361.81 166.89,361.81 C166.89,361.81 174.57,354.41 174.57,354.41 C174.57,354.41 157.07,350.3 157.07,350.3 C157.07,350.3 168.1,341.28 168.1,341.28 C168.1,341.28 154.76,327.58 154.76,327.58 C154.76,327.58 170.05,326.64 170.05,326.64 C170.05,326.64 161.94,313.64 161.94,313.64 C161.94,313.64 172,312 172,312 C172,312 181.91,313.32 181.91,313.32 C181.91,313.32 179.96,327.96 179.96,327.96 C179.96,327.96 178.01,342.6 178.01,342.6 C178.01,342.6 183.41,349.73 183.41,349.73 C183.41,349.73 190.32,362.78 190.32,362.78 C190.32,362.78 194.12,368.25 194.12,368.25 C194.12,368.25 208.06,373.13 208.06,373.13 C208.06,373.13 222,378 222,378 C222,378 231.61,379.14 231.61,379.14 C231.61,379.14 246.24,377.15 246.24,377.15 C246.24,377.15 260.88,375.15 260.88,375.15 C260.88,375.15 266.52,372.35 266.52,372.35 C266.52,372.35 275.74,360.82 275.74,360.82 C275.74,360.82 284.97,349.28 284.97,349.28 C284.97,349.28 294.19,337.75 294.19,337.75 C294.19,337.75 302,344 302,344 Z" fill="#8c6a48" stroke="#1d1418" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M301.45,356.14 C302,357 304.22,360.48 304.77,361.35" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M293.26,368.5 C293.96,369.48 296.74,373.41 297.44,374.39" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M281.61,378.09 C281.98,378.81 283.43,381.67 283.8,382.39" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M268.23,392.5 C268.06,393.65 267.34,398.25 267.16,399.4" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M253.52,393.87 C253.33,394.93 252.56,399.19 252.37,400.25" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M238.62,393.92 C238.39,394.72 237.49,397.91 237.26,398.71" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M220.44,397.42 C219.73,398.45 216.88,402.56 216.17,403.58" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M207.29,390.3 C206.68,391.02 204.26,393.92 203.66,394.64" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M193.38,385.34 C192.78,386.05 190.38,388.89 189.78,389.6" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M175.95,375.98 C174.73,376.25 169.83,377.34 168.61,377.61" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M171.9,361.42 C171.07,361.48 167.73,361.75 166.89,361.81" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M163.39,349.21 C162.34,349.39 158.13,350.12 157.07,350.3" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M161.2,330.45 C160.13,329.97 155.83,328.06 154.76,327.58" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M166.03,316.19 C165.35,315.77 162.62,314.06 161.94,313.64" fill="none" stroke="#46321f" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+      <clipPath id="clip-body"><path d="M292,302 C300,311 303.33,322 304,332 C304.67,342 302,353.33 296,362 C290,370.67 279.33,379.67 268,384 C256.67,388.33 240.67,389.33 228,388 C215.33,386.67 201.33,382.33 192,376 C182.67,369.67 175.67,359.33 172,350 C168.33,340.67 167.67,329 170,320 C172.33,311 178.33,302.67 186,296 C193.67,289.33 204.33,283 216,280 C227.67,277 243.33,274.33 256,278 C268.67,281.67 284,293 292,302 Z" /></clipPath>
+      <g clip-path="url(#clip-body)">
+      <path d="M292,302 C300,311 303.33,322 304,332 C304.67,342 302,353.33 296,362 C290,370.67 279.33,379.67 268,384 C256.67,388.33 240.67,389.33 228,388 C215.33,386.67 201.33,382.33 192,376 C182.67,369.67 175.67,359.33 172,350 C168.33,340.67 167.67,329 170,320 C172.33,311 178.33,302.67 186,296 C193.67,289.33 204.33,283 216,280 C227.67,277 243.33,274.33 256,278 C268.67,281.67 284,293 292,302 Z" fill="#8c6a48" />
+      <path d="M214,286 C218,283.33 238.67,280.33 250,282 C261.33,283.67 280.67,293 282,296 C283.33,299 267.33,299.67 258,300 C248.67,300.33 233.33,300.33 226,298 C218.67,295.67 210,288.67 214,286 Z" fill="#b08c62" />
+      <path d="M172,350 C171,353.33 184.33,369.67 194,376 C203.67,382.33 218,386.67 230,388 C242,389.33 264.67,386.33 266,384 C267.33,381.67 249,378.67 238,374 C227,369.33 211,360 200,356 C189,352 173,346.67 172,350 Z" fill="#684c32" />
+      <path d="M196,300 C195.17,304.33 193,317.33 191,326 C189,334.67 185.17,347.67 184,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M208,303 C207.17,306.83 205,317.83 203,326 C201,334.17 197.17,347.67 196,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M220,300 C219.17,304.33 217,317.33 215,326 C213,334.67 209.17,347.67 208,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M232,303 C231.17,306.83 229,317.83 227,326 C225,334.17 221.17,347.67 220,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M244,300 C243.17,304.33 241,317.33 239,326 C237,334.67 233.17,347.67 232,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M256,303 C255.17,306.83 253,317.83 251,326 C249,334.17 245.17,347.67 244,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M268,300 C267.17,304.33 265,317.33 263,326 C261,334.67 257.17,347.67 256,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M280,303 C279.17,306.83 277,317.83 275,326 C273,334.17 269.17,347.67 268,352" fill="none" stroke="#46321f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" />
+      </g>
+      <path d="M292,302 C300,311 303.33,322 304,332 C304.67,342 302,353.33 296,362 C290,370.67 279.33,379.67 268,384 C256.67,388.33 240.67,389.33 228,388 C215.33,386.67 201.33,382.33 192,376 C182.67,369.67 175.67,359.33 172,350 C168.33,340.67 167.67,329 170,320 C172.33,311 178.33,302.67 186,296 C193.67,289.33 204.33,283 216,280 C227.67,277 243.33,274.33 256,278 C268.67,281.67 284,293 292,302 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="near-leg-l" inkscape:groupmode="layer" inkscape:label="Shank - near" data-rig-part="near_leg_l" data-rig-bone="near_leg_l" data-rig-z="40">
+      <clipPath id="clip-near-shank"><path d="M237.76,390.24 L236.65,388.72 L236.07,386.94 L236.07,385.06 L236.65,383.28 L237.76,381.76 L239.28,380.65 L241.06,380.07 L242.94,380.07 L244.72,380.65 L246.24,381.76 L263.89,400.11 L264.9,401.5 L265.43,403.14 L265.43,404.86 L264.9,406.5 L263.89,407.89 L262.5,408.9 L260.86,409.43 L259.14,409.43 L257.5,408.9 L256.11,407.89 Z" /></clipPath>
+      <g clip-path="url(#clip-near-shank)">
+      <path d="M237.76,390.24 L236.65,388.72 L236.07,386.94 L236.07,385.06 L236.65,383.28 L237.76,381.76 L239.28,380.65 L241.06,380.07 L242.94,380.07 L244.72,380.65 L246.24,381.76 L263.89,400.11 L264.9,401.5 L265.43,403.14 L265.43,404.86 L264.9,406.5 L263.89,407.89 L262.5,408.9 L260.86,409.43 L259.14,409.43 L257.5,408.9 L256.11,407.89 Z" fill="#c29a66" />
+      <path d="M237,390 C238.67,389.83 245.33,389.17 247,389" fill="none" stroke="#8a6a40" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M237.2,394 C238.87,393.83 245.53,393.17 247.2,393" fill="none" stroke="#8a6a40" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M237.4,398 C239.07,397.83 245.73,397.17 247.4,397" fill="none" stroke="#8a6a40" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M237.6,402 C239.27,401.83 245.93,401.17 247.6,401" fill="none" stroke="#8a6a40" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      </g>
+      <path d="M237.76,390.24 L236.65,388.72 L236.07,386.94 L236.07,385.06 L236.65,383.28 L237.76,381.76 L239.28,380.65 L241.06,380.07 L242.94,380.07 L244.72,380.65 L246.24,381.76 L263.89,400.11 L264.9,401.5 L265.43,403.14 L265.43,404.86 L264.9,406.5 L263.89,407.89 L262.5,408.9 L260.86,409.43 L259.14,409.43 L257.5,408.9 L256.11,407.89 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="near-foot" inkscape:groupmode="layer" inkscape:label="Foot - near" data-rig-part="near_foot" data-rig-bone="near_foot" data-rig-z="42">
+      <path d="M256.75,400.75 L257.91,399.9 L259.28,399.46 L260.72,399.46 L262.09,399.9 L263.25,400.75 L264.1,401.91 L264.54,403.28 L264.54,404.72 L264.1,406.09 L263.25,407.25 L253.26,415.26 L252.45,415.85 L251.5,416.16 L250.5,416.16 L249.55,415.85 L248.74,415.26 L248.15,414.45 L247.84,413.5 L247.84,412.5 L248.15,411.55 L248.74,410.74 Z" fill="#c29a66" />
+      <path d="M256.75,400.75 L257.91,399.9 L259.28,399.46 L260.72,399.46 L262.09,399.9 L263.25,400.75 L264.1,401.91 L264.54,403.28 L264.54,404.72 L264.1,406.09 L263.25,407.25 L253.26,415.26 L252.45,415.85 L251.5,416.16 L250.5,416.16 L249.55,415.85 L248.74,415.26 L248.15,414.45 L247.84,413.5 L247.84,412.5 L248.15,411.55 L248.74,410.74 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M252,411 C251,411.5 246.33,412.67 246,414 C245.67,415.33 249.33,418.17 250,419" fill="none" stroke="#3a2a1a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M257.01,407.49 L256.07,406.4 L255.53,405.07 L255.41,403.63 L255.75,402.23 L256.51,401.01 L257.6,400.07 L258.93,399.53 L260.37,399.41 L261.77,399.75 L262.99,400.51 L276.08,413.57 L276.73,414.33 L277.11,415.26 L277.19,416.26 L276.95,417.23 L276.43,418.08 L275.67,418.73 L274.74,419.11 L273.74,419.19 L272.77,418.95 L271.92,418.43 Z" fill="#c29a66" />
+      <path d="M257.01,407.49 L256.07,406.4 L255.53,405.07 L255.41,403.63 L255.75,402.23 L256.51,401.01 L257.6,400.07 L258.93,399.53 L260.37,399.41 L261.77,399.75 L262.99,400.51 L276.08,413.57 L276.73,414.33 L277.11,415.26 L277.19,416.26 L276.95,417.23 L276.43,418.08 L275.67,418.73 L274.74,419.11 L273.74,419.19 L272.77,418.95 L271.92,418.43 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M273,414 C274,414.5 278.67,415.67 279,417 C279.33,418.33 275.67,421.17 275,422" fill="none" stroke="#3a2a1a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M258.6,408.38 L257.31,407.73 L256.29,406.72 L255.63,405.44 L255.4,404.02 L255.62,402.6 L256.27,401.31 L257.28,400.29 L258.56,399.63 L259.98,399.4 L261.4,399.62 L285.98,408.95 L286.87,409.4 L287.58,410.11 L288.04,411 L288.2,411.99 L288.05,412.98 L287.6,413.87 L286.89,414.58 L286,415.04 L285.01,415.2 L284.02,415.05 Z" fill="#c29a66" />
+      <path d="M258.6,408.38 L257.31,407.73 L256.29,406.72 L255.63,405.44 L255.4,404.02 L255.62,402.6 L256.27,401.31 L257.28,400.29 L258.56,399.63 L259.98,399.4 L261.4,399.62 L285.98,408.95 L286.87,409.4 L287.58,410.11 L288.04,411 L288.2,411.99 L288.05,412.98 L287.6,413.87 L286.89,414.58 L286,415.04 L285.01,415.2 L284.02,415.05 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M284,410 C285,410.5 289.67,411.67 290,413 C290.33,414.33 286.67,417.17 286,418" fill="none" stroke="#3a2a1a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="neck" inkscape:groupmode="layer" inkscape:label="Neck" data-rig-part="neck" data-rig-bone="neck" data-rig-z="60">
+      <path d="M266,314 C265,309 266.67,299 270,294 C273.33,289 280.67,284.67 286,284 C291.33,283.33 298.67,286 302,290 C305.33,294 307.33,302.67 306,308 C304.67,313.33 299,319.33 294,322 C289,324.67 280.67,325.33 276,324 C271.33,322.67 267,319 266,314 Z" fill="#8c6a48" />
+    </g>
+    <g id="jaw" inkscape:groupmode="layer" inkscape:label="Lower Beak" data-rig-part="jaw" data-rig-bone="jaw" data-rig-z="69">
+      <path d="M316,300 C316,300 392,362 392,362 C392,362 386,364 386,364 C386,364 318,306 318,306 C318,306 316,300 316,300 Z" fill="#b99c70" />
+      <path d="M316,300 C316,300 392,362 392,362 C392,362 386,364 386,364 C386,364 318,306 318,306 C318,306 316,300 316,300 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="head" inkscape:groupmode="layer" inkscape:label="Head" data-rig-part="head" data-rig-bone="head" data-rig-z="70">
+      <clipPath id="clip-head"><path d="M282,300 C281.33,295.33 283,286.67 286,282 C289,277.33 295,273 300,272 C305,271 312,273 316,276 C320,279 323.33,285.33 324,290 C324.67,294.67 323,300.33 320,304 C317,307.67 311,311 306,312 C301,313 294,312 290,310 C286,308 282.67,304.67 282,300 Z" /></clipPath>
+      <g clip-path="url(#clip-head)">
+      <path d="M282,300 C281.33,295.33 283,286.67 286,282 C289,277.33 295,273 300,272 C305,271 312,273 316,276 C320,279 323.33,285.33 324,290 C324.67,294.67 323,300.33 320,304 C317,307.67 311,311 306,312 C301,313 294,312 290,310 C286,308 282.67,304.67 282,300 Z" fill="#8c6a48" />
+      <path d="M288,284 C287.67,282.33 295.67,276.67 300,276 C304.33,275.33 313.67,278.33 314,280 C314.33,281.67 306.33,285.33 302,286 C297.67,286.67 288.33,285.67 288,284 Z" fill="#b08c62" />
+      </g>
+      <path d="M282,300 C281.33,295.33 283,286.67 286,282 C289,277.33 295,273 300,272 C305,271 312,273 316,276 C320,279 323.33,285.33 324,290 C324.67,294.67 323,300.33 320,304 C317,307.67 311,311 306,312 C301,313 294,312 290,310 C286,308 282.67,304.67 282,300 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M312,296 C314.67,293.67 323.33,286.33 328,282 C332.67,277.67 338,272 340,270" fill="none" stroke="#46321f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M312,296 C314.67,294.67 323.33,290.33 328,288 C332.67,285.67 338,283 340,282" fill="none" stroke="#46321f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M312,296 C314.67,296 323.33,295.67 328,296 C332.67,296.33 338,297.67 340,298" fill="none" stroke="#46321f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round" />
+      <clipPath id="clip-beak"><path d="M314,288 C314,288 316,282.33 330,294 C344,305.67 398,358 398,358 C398,358 396,364 396,364 C396,364 318,302 318,302 C318,302 314,288 314,288 Z" /></clipPath>
+      <g clip-path="url(#clip-beak)">
+      <path d="M314,288 C314,288 316,282.33 330,294 C344,305.67 398,358 398,358 C398,358 396,364 396,364 C396,364 318,302 318,302 C318,302 314,288 314,288 Z" fill="#ead9b8" />
+      <path d="M322,296 C333.33,306 378.67,346 390,356" fill="none" stroke="#b99c70" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+      </g>
+      <path d="M314,288 C314,288 316,282.33 330,294 C344,305.67 398,358 398,358 C398,358 396,364 396,364 C396,364 318,302 318,302 C318,302 314,288 314,288 Z" fill="none" stroke="#1d1418" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="eye-open" inkscape:groupmode="layer" inkscape:label="Eye - Open" data-rig-part="eye_open" data-rig-bone="head" data-rig-z="72" data-rig-opacity="eye.open" data-rig-default="1">
+      <ellipse cx="306" cy="287" rx="3.2" ry="3.2" fill="#1a1210" stroke="#1d1418" stroke-width="1.3" />
+      <ellipse cx="306.6" cy="287" rx="1.6" ry="1.6" fill="#120d0f" />
+      <ellipse cx="305.04" cy="285.88" rx="0.7" ry="0.7" fill="#ffffff" />
+    </g>
+    <g id="eye-angry" inkscape:groupmode="layer" inkscape:label="Eye - Angry" data-rig-part="eye_angry" data-rig-bone="head" data-rig-z="72" data-rig-opacity="eye.angry">
+      <ellipse cx="306" cy="287" rx="3.2" ry="3.2" fill="#1a1210" stroke="#1d1418" stroke-width="1.3" />
+      <ellipse cx="307" cy="287.4" rx="1.15" ry="1.15" fill="#120d0f" />
+      <path d="M299.8,280.8 C299.8,280.8 312.2,286.36 312.2,286.36 C312.2,286.36 312.2,280.8 312.2,280.8 C312.2,280.8 299.8,280.8 299.8,280.8 Z" fill="#46321f" stroke="#1d1418" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="eye-shut" inkscape:groupmode="layer" inkscape:label="Eye - Shut" data-rig-part="eye_shut" data-rig-bone="head" data-rig-z="72" data-rig-opacity="eye.shut">
+      <path d="M302.8,287 C303.33,287.27 304.93,288.6 306,288.6 C307.07,288.6 308.67,287.27 309.2,287" fill="none" stroke="#1d1418" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+    <g id="eye-dead" inkscape:groupmode="layer" inkscape:label="Eye - Dead" data-rig-part="eye_dead" data-rig-bone="head" data-rig-z="72" data-rig-opacity="eye.dead">
+      <path d="M303.44,284.44 C304.29,285.29 307.71,288.71 308.56,289.56" fill="none" stroke="#1d1418" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <path d="M303.44,289.56 C304.29,288.71 307.71,285.29 308.56,284.44" fill="none" stroke="#1d1418" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+    </g>
+  </g>
+  <g id="rig-joints" inkscape:groupmode="layer" inkscape:label="Rig Joints" style="display:none">
+    <circle id="joint-body" data-joint="body" cx="236" cy="332" r="2" fill="#ff00ff" />
+    <circle id="joint-neck" data-joint="neck" cx="280" cy="306" r="2" fill="#ff00ff" />
+    <circle id="joint-head" data-joint="head" cx="302" cy="292" r="2" fill="#ff00ff" />
+    <circle id="joint-beak-tip" data-joint="beak_tip" cx="398" cy="362" r="2" fill="#ff00ff" />
+    <circle id="joint-jaw" data-joint="jaw" cx="318" cy="302" r="2" fill="#ff00ff" />
+    <circle id="joint-tail" data-joint="tail" cx="178" cy="344" r="2" fill="#ff00ff" />
+    <circle id="joint-tail-tip" data-joint="tail_tip" cx="160" cy="358" r="2" fill="#ff00ff" />
+    <circle id="joint-near-shoulder" data-joint="near_shoulder" cx="250" cy="312" r="2" fill="#ff00ff" />
+    <circle id="joint-near-wingtip" data-joint="near_wingtip" cx="228" cy="334" r="2" fill="#ff00ff" />
+    <circle id="joint-far-shoulder" data-joint="far_shoulder" cx="244" cy="310" r="2" fill="#ff00ff" />
+    <circle id="joint-far-wingtip" data-joint="far_wingtip" cx="222" cy="332" r="2" fill="#ff00ff" />
+    <circle id="joint-near-hip" data-joint="near_hip" cx="254" cy="366" r="2" fill="#ff00ff" />
+    <circle id="joint-near-knee" data-joint="near_knee" cx="242" cy="386" r="2" fill="#ff00ff" />
+    <circle id="joint-near-ankle" data-joint="near_ankle" cx="260" cy="404" r="2" fill="#ff00ff" />
+    <circle id="joint-far-hip" data-joint="far_hip" cx="224" cy="364" r="2" fill="#ff00ff" />
+    <circle id="joint-far-knee" data-joint="far_knee" cx="212" cy="386" r="2" fill="#ff00ff" />
+    <circle id="joint-far-ankle" data-joint="far_ankle" cx="228" cy="404" r="2" fill="#ff00ff" />
+  </g>
+  <!-- BEGIN AMBITION SVG RIG v1 -->
+  <metadata id="ambition-rig-metadata" data-ambition-schema="ambition-svg-rig-v1" data-ambition-role="character-rig" data-rig-coordinate-space="root-svg-user-space" data-rig-rest-authority="markers">
+    <g id="ambition-rig-view-side" data-rig-view-def="side" data-rig-source-layer="kiwi-side" data-rig-source-label="Kiwi - Side Right" data-rig-root="ambition-rig-side-joint-rig_root" data-rig-projection="side" data-rig-profile="custom-articulated-v1" data-rig-pose-authority="geometry-only" data-rig-part-order="attribute" data-rig-source-map-quality="exact-frame-space">
+      <g id="ambition-rig-side-bone-body" data-rig-bone-def="body" data-rig-origin="ambition-rig-side-joint-body_pivot" />
+      <g id="ambition-rig-side-bone-neck" data-rig-bone-def="neck" data-rig-parent="body" data-rig-origin="ambition-rig-side-joint-neck_pivot" data-rig-tip="ambition-rig-side-joint-neck_tip" />
+      <g id="ambition-rig-side-bone-head" data-rig-bone-def="head" data-rig-parent="neck" data-rig-origin="ambition-rig-side-joint-neck" />
+      <g id="ambition-rig-side-bone-jaw" data-rig-bone-def="jaw" data-rig-parent="head" data-rig-origin="ambition-rig-side-joint-jaw_hinge" />
+      <g id="ambition-rig-side-bone-tail" data-rig-bone-def="tail" data-rig-parent="body" data-rig-origin="ambition-rig-side-joint-tail_pivot" data-rig-tip="ambition-rig-side-joint-tail_tip" />
+      <g id="ambition-rig-side-bone-far_wing" data-rig-bone-def="far_wing" data-rig-parent="body" data-rig-origin="ambition-rig-side-joint-far_wing_pivot" data-rig-tip="ambition-rig-side-joint-far_wing_tip" />
+      <g id="ambition-rig-side-bone-far_leg_u" data-rig-bone-def="far_leg_u" data-rig-parent="body" data-rig-origin="ambition-rig-side-joint-far_hip" data-rig-tip="ambition-rig-side-joint-far_knee" />
+      <g id="ambition-rig-side-bone-far_leg_l" data-rig-bone-def="far_leg_l" data-rig-parent="far_leg_u" data-rig-origin="ambition-rig-side-joint-far_knee" data-rig-tip="ambition-rig-side-joint-far_ankle" />
+      <g id="ambition-rig-side-bone-far_foot" data-rig-bone-def="far_foot" data-rig-parent="far_leg_l" data-rig-origin="ambition-rig-side-joint-far_foot_pivot" />
+      <g id="ambition-rig-side-bone-near_wing" data-rig-bone-def="near_wing" data-rig-parent="body" data-rig-origin="ambition-rig-side-joint-near_wing_pivot" data-rig-tip="ambition-rig-side-joint-near_wing_tip" />
+      <g id="ambition-rig-side-bone-near_leg_u" data-rig-bone-def="near_leg_u" data-rig-parent="body" data-rig-origin="ambition-rig-side-joint-near_hip" data-rig-tip="ambition-rig-side-joint-near_knee" />
+      <g id="ambition-rig-side-bone-near_leg_l" data-rig-bone-def="near_leg_l" data-rig-parent="near_leg_u" data-rig-origin="ambition-rig-side-joint-near_knee" data-rig-tip="ambition-rig-side-joint-near_ankle" />
+      <g id="ambition-rig-side-bone-near_foot" data-rig-bone-def="near_foot" data-rig-parent="near_leg_l" data-rig-origin="ambition-rig-side-joint-near_foot_pivot" />
+      <g id="ambition-rig-side-part-tail" data-rig-part-def="tail" data-rig-bone="tail" data-rig-z="10" data-rig-pivot="ambition-rig-side-bind-tail" data-rig-bind-angle="142.125" data-rig-elements="tail" />
+      <g id="ambition-rig-side-part-far_leg_u" data-rig-part-def="far_leg_u" data-rig-bone="far_leg_u" data-rig-z="18" data-rig-pivot="ambition-rig-side-bind-far_leg_u" data-rig-bind-angle="118.6105" data-rig-elements="far-leg-u" />
+      <g id="ambition-rig-side-part-far_leg_l" data-rig-part-def="far_leg_l" data-rig-bone="far_leg_l" data-rig-z="18" data-rig-pivot="ambition-rig-side-bind-far_leg_l" data-rig-bind-angle="48.3665" data-rig-elements="far-leg-l" />
+      <g id="ambition-rig-side-part-far_foot" data-rig-part-def="far_foot" data-rig-bone="far_foot" data-rig-z="20" data-rig-pivot="ambition-rig-side-bind-far_foot" data-rig-bind-angle="0" data-rig-elements="far-foot" />
+      <g id="ambition-rig-side-part-near_leg_u" data-rig-part-def="near_leg_u" data-rig-bone="near_leg_u" data-rig-z="26" data-rig-pivot="ambition-rig-side-bind-near_leg_u" data-rig-bind-angle="120.9638" data-rig-elements="near-leg-u" />
+      <g id="ambition-rig-side-part-body" data-rig-part-def="body" data-rig-bone="body" data-rig-z="30" data-rig-pivot="ambition-rig-side-bind-body" data-rig-bind-angle="0" data-rig-elements="body" />
+      <g id="ambition-rig-side-part-near_leg_l" data-rig-part-def="near_leg_l" data-rig-bone="near_leg_l" data-rig-z="40" data-rig-pivot="ambition-rig-side-bind-near_leg_l" data-rig-bind-angle="45" data-rig-elements="near-leg-l" />
+      <g id="ambition-rig-side-part-near_foot" data-rig-part-def="near_foot" data-rig-bone="near_foot" data-rig-z="42" data-rig-pivot="ambition-rig-side-bind-near_foot" data-rig-bind-angle="0" data-rig-elements="near-foot" />
+      <g id="ambition-rig-side-part-neck" data-rig-part-def="neck" data-rig-bone="neck" data-rig-z="60" data-rig-pivot="ambition-rig-side-bind-neck" data-rig-bind-angle="-32.4712" data-rig-elements="neck" />
+      <g id="ambition-rig-side-part-jaw" data-rig-part-def="jaw" data-rig-bone="jaw" data-rig-z="69" data-rig-pivot="ambition-rig-side-bind-jaw" data-rig-bind-angle="36.8699" data-rig-elements="jaw" />
+      <g id="ambition-rig-side-part-head" data-rig-part-def="head" data-rig-bone="head" data-rig-z="70" data-rig-pivot="ambition-rig-side-bind-head" data-rig-bind-angle="36.0983" data-rig-elements="head" />
+      <g id="ambition-rig-side-part-eye_open" data-rig-part-def="eye_open" data-rig-bone="head" data-rig-z="72" data-rig-pivot="ambition-rig-side-bind-eye_open" data-rig-bind-angle="36.0983" data-rig-opacity="eye.open" data-rig-elements="eye-open" />
+      <g id="ambition-rig-side-part-eye_angry" data-rig-part-def="eye_angry" data-rig-bone="head" data-rig-z="72" data-rig-pivot="ambition-rig-side-bind-eye_angry" data-rig-bind-angle="36.0983" data-rig-opacity="eye.angry" data-rig-elements="eye-angry" />
+      <g id="ambition-rig-side-part-eye_shut" data-rig-part-def="eye_shut" data-rig-bone="head" data-rig-z="72" data-rig-pivot="ambition-rig-side-bind-eye_shut" data-rig-bind-angle="36.0983" data-rig-opacity="eye.shut" data-rig-elements="eye-shut" />
+      <g id="ambition-rig-side-part-eye_dead" data-rig-part-def="eye_dead" data-rig-bone="head" data-rig-z="72" data-rig-pivot="ambition-rig-side-bind-eye_dead" data-rig-bind-angle="36.0983" data-rig-opacity="eye.dead" data-rig-elements="eye-dead" />
+    </g>
+  </metadata>
+  <g id="ambition-rig-markers" data-rig-editor-layer="true" inkscape:groupmode="layer" inkscape:label="Ambition Rig Markers">
+    <g id="ambition-rig-markers-side" data-rig-view="side" inkscape:label="Rig Markers - Kiwi - Side Right">
+      <line id="ambition-rig-side-guide-neck" data-rig-bone-guide="neck" x1="280" y1="306" x2="302" y2="292" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <line id="ambition-rig-side-guide-tail" data-rig-bone-guide="tail" x1="178" y1="344" x2="159.999932" y2="358.000061" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <line id="ambition-rig-side-guide-far_wing" data-rig-bone-guide="far_wing" x1="244" y1="310" x2="221.999928" y2="332.000072" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <line id="ambition-rig-side-guide-far_leg_u" data-rig-bone-guide="far_leg_u" x1="224" y1="364" x2="212" y2="386" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <line id="ambition-rig-side-guide-far_leg_l" data-rig-bone-guide="far_leg_l" x1="212" y1="386" x2="228" y2="404" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <line id="ambition-rig-side-guide-near_wing" data-rig-bone-guide="near_wing" x1="250" y1="312" x2="227.999928" y2="334.000072" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <line id="ambition-rig-side-guide-near_leg_u" data-rig-bone-guide="near_leg_u" x1="254" y1="366" x2="242" y2="386" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <line id="ambition-rig-side-guide-near_leg_l" data-rig-bone-guide="near_leg_l" x1="242" y1="386" x2="260" y2="404" stroke="#d226c6" stroke-width="1.25" stroke-opacity="0.32" />
+      <circle id="ambition-rig-side-joint-body_pivot" data-rig-joint="body_pivot" cx="236" cy="332" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-far_ankle" data-rig-joint="far_ankle" cx="228" cy="404" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-far_foot_pivot" data-rig-joint="far_foot_pivot" cx="228" cy="404" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-far_hip" data-rig-joint="far_hip" cx="224" cy="364" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-far_knee" data-rig-joint="far_knee" cx="212" cy="386" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-far_wing_pivot" data-rig-joint="far_wing_pivot" cx="244" cy="310" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-far_wing_tip" data-rig-joint="far_wing_tip" cx="221.999928" cy="332.000072" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-jaw_hinge" data-rig-joint="jaw_hinge" cx="318" cy="302" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-near_ankle" data-rig-joint="near_ankle" cx="260" cy="404" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-near_foot_pivot" data-rig-joint="near_foot_pivot" cx="260" cy="404" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-near_hip" data-rig-joint="near_hip" cx="254" cy="366" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-near_knee" data-rig-joint="near_knee" cx="242" cy="386" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-near_wing_pivot" data-rig-joint="near_wing_pivot" cx="250" cy="312" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-near_wing_tip" data-rig-joint="near_wing_tip" cx="227.999928" cy="334.000072" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-neck" data-rig-joint="neck" cx="302" cy="292" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-neck_pivot" data-rig-joint="neck_pivot" cx="280" cy="306" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-neck_tip" data-rig-joint="neck_tip" cx="302" cy="292" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-rig_root" data-rig-joint="rig_root" cx="256" cy="416" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-tail_pivot" data-rig-joint="tail_pivot" cx="178" cy="344" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-joint-tail_tip" data-rig-joint="tail_tip" cx="159.999932" cy="358.000061" r="3" fill="#ff3bd4" fill-opacity="0.58" stroke="#43133d" stroke-width="1" />
+      <circle id="ambition-rig-side-bind-tail" data-rig-bind-pivot="tail" cx="178" cy="344" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-far_leg_u" data-rig-bind-pivot="far_leg_u" cx="224" cy="364" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-far_leg_l" data-rig-bind-pivot="far_leg_l" cx="212" cy="386" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-far_foot" data-rig-bind-pivot="far_foot" cx="228" cy="404" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-near_leg_u" data-rig-bind-pivot="near_leg_u" cx="254" cy="366" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-body" data-rig-bind-pivot="body" cx="236" cy="332" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-near_leg_l" data-rig-bind-pivot="near_leg_l" cx="242" cy="386" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-near_foot" data-rig-bind-pivot="near_foot" cx="260" cy="404" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-neck" data-rig-bind-pivot="neck" cx="280" cy="306" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-jaw" data-rig-bind-pivot="jaw" cx="318" cy="302" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-head" data-rig-bind-pivot="head" cx="302" cy="292" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-eye_open" data-rig-bind-pivot="eye_open" cx="302" cy="292" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-eye_angry" data-rig-bind-pivot="eye_angry" cx="302" cy="292" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-eye_shut" data-rig-bind-pivot="eye_shut" cx="302" cy="292" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+      <circle id="ambition-rig-side-bind-eye_dead" data-rig-bind-pivot="eye_dead" cx="302" cy="292" r="2.2" fill="#28c8ff" fill-opacity="0.42" stroke="#093b52" stroke-width="0.8" />
+    </g>
+  </g>
+  <!-- END AMBITION SVG RIG v1 -->
+</svg>

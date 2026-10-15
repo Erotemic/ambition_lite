@@ -1,0 +1,13 @@
+Ambition Lite
+
+Portions of this work were adapted from or generated using source material in:
+- Ambition (original robot and T-rex SVG source rigs, original character SVGs,
+  sampled animation joint poses, Primeval Trail LDtk geometry and spawn data).
+- cc_templates (the predict/investigate/modify pedagogy influenced the lesson
+  structure; cc_templates code is not imported at runtime).
+
+Both supplied upstream archives contain the Apache License, Version 2.0.
+The complete license text is included in LICENSE. This repository is an
+educational adaptation, not a byte-for-byte source port of the Rust game.
+Procedurally synthesized WAV tunes and the simplified Python game loop were
+written for this repository, not copied from original Ambition soundtrack WAVs.

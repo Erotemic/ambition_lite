@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ambition-lite"
+version = "0.1.0"
+description = "Teachable pygame platformer inspired by Ambition's Primeval Trail"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = ["pygame-ce>=2.5,<3"]
+
+[project.optional-dependencies]
+authoring = ["cairosvg>=2.7", "pillow>=10"]
+test = ["pytest>=8"]
+
+[project.scripts]
+ambition-lite = "ambition_lite.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
