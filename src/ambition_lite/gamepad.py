@@ -14,11 +14,14 @@ class Gamepad:
     def __init__(self):
         # Pygame is imported only when the actual game window starts.
         try:
+            from pygame import constants
             from pygame._sdl2 import controller
         except ImportError:
+            constants = None
             controller = None
 
         self.api = controller
+        self.constants = constants
         self.device = None
         self._trigger_down = False
         if controller is not None:
@@ -47,29 +50,29 @@ class Gamepad:
         self.refresh()
         if not self.connected:
             return PadState()
-        api = self.api
+        codes = self.constants
         device = self.device
         button_keys = {
-            'south': api.CONTROLLER_BUTTON_A,
-            'east': api.CONTROLLER_BUTTON_B,
-            'west': api.CONTROLLER_BUTTON_X,
-            'north': api.CONTROLLER_BUTTON_Y,
-            'rb': api.CONTROLLER_BUTTON_RIGHTSHOULDER,
-            'start': api.CONTROLLER_BUTTON_START,
-            'back': api.CONTROLLER_BUTTON_BACK,
-            'left': api.CONTROLLER_BUTTON_DPAD_LEFT,
-            'right': api.CONTROLLER_BUTTON_DPAD_RIGHT,
-            'up': api.CONTROLLER_BUTTON_DPAD_UP,
-            'down': api.CONTROLLER_BUTTON_DPAD_DOWN,
+            'south': codes.CONTROLLER_BUTTON_A,
+            'east': codes.CONTROLLER_BUTTON_B,
+            'west': codes.CONTROLLER_BUTTON_X,
+            'north': codes.CONTROLLER_BUTTON_Y,
+            'rb': codes.CONTROLLER_BUTTON_RIGHTSHOULDER,
+            'start': codes.CONTROLLER_BUTTON_START,
+            'back': codes.CONTROLLER_BUTTON_BACK,
+            'left': codes.CONTROLLER_BUTTON_DPAD_LEFT,
+            'right': codes.CONTROLLER_BUTTON_DPAD_RIGHT,
+            'up': codes.CONTROLLER_BUTTON_DPAD_UP,
+            'down': codes.CONTROLLER_BUTTON_DPAD_DOWN,
         }
         buttons = {name for name, code in button_keys.items() if device.get_button(code)}
-        trigger = max(0.0, device.get_axis(api.CONTROLLER_AXIS_TRIGGERRIGHT) / 32768.0)
+        trigger = max(0.0, device.get_axis(codes.CONTROLLER_AXIS_TRIGGERRIGHT) / 32768.0)
         # Same release/press thresholds as Rust; no retrigger on trigger jitter.
         self._trigger_down = trigger > (.30 if self._trigger_down else .55)
         if self._trigger_down:
             buttons.add('rt')
         return PadState(
             buttons=frozenset(buttons),
-            stick_x=device.get_axis(api.CONTROLLER_AXIS_LEFTX) / 32768.0,
-            stick_y=device.get_axis(api.CONTROLLER_AXIS_LEFTY) / 32768.0,
+            stick_x=device.get_axis(codes.CONTROLLER_AXIS_LEFTX) / 32768.0,
+            stick_y=device.get_axis(codes.CONTROLLER_AXIS_LEFTY) / 32768.0,
         )

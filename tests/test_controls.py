@@ -147,6 +147,11 @@ class FakeController:
 
 
 class FakeSdl:
+    # The real pygame._sdl2.controller module does not export the codes.
+    pass
+
+
+class FakePygameConstants:
     CONTROLLER_BUTTON_A = 1
     CONTROLLER_BUTTON_B = 2
     CONTROLLER_BUTTON_X = 3
@@ -166,19 +171,20 @@ class FakeSdl:
 def test_sdl_adapter_trigger_hysteresis_and_button_names():
     pad = Gamepad.__new__(Gamepad)
     pad.api = FakeSdl()
+    pad.constants = FakePygameConstants
     pad.device = FakeController()
     pad._trigger_down = False
-    pad.device.buttons = {pad.api.CONTROLLER_BUTTON_A,
-                          pad.api.CONTROLLER_BUTTON_DPAD_RIGHT}
-    pad.device.axes = {pad.api.CONTROLLER_AXIS_LEFTX: 16384}
+    pad.device.buttons = {pad.constants.CONTROLLER_BUTTON_A,
+                          pad.constants.CONTROLLER_BUTTON_DPAD_RIGHT}
+    pad.device.axes = {pad.constants.CONTROLLER_AXIS_LEFTX: 16384}
     a = pad.sample()
     assert a.buttons == frozenset({'south', 'right'})
     assert a.stick_x == pytest.approx(.5)
-    pad.device.axes[pad.api.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.57 * 32768)
+    pad.device.axes[pad.constants.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.57 * 32768)
     assert 'rt' in pad.sample().buttons
-    pad.device.axes[pad.api.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.41 * 32768)
+    pad.device.axes[pad.constants.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.41 * 32768)
     assert 'rt' in pad.sample().buttons
-    pad.device.axes[pad.api.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.24 * 32768)
+    pad.device.axes[pad.constants.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.24 * 32768)
     assert 'rt' not in pad.sample().buttons
-    pad.device.axes[pad.api.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.40 * 32768)
+    pad.device.axes[pad.constants.CONTROLLER_AXIS_TRIGGERRIGHT] = int(.40 * 32768)
     assert 'rt' not in pad.sample().buttons
