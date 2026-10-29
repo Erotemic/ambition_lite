@@ -92,8 +92,8 @@ class Puppet:
 
 
 class Painter:
-    def __init__(self, window_size=settings.WINDOW_SIZE):
-        self.width, self.height = window_size
+    def __init__(self, view_size=settings.VIEW_SIZE):
+        self.width, self.height = view_size
         self.font = pygame.font.Font(None, 29)
         self.small = pygame.font.Font(None, 22)
         self.big = pygame.font.Font(None, 72)
@@ -103,7 +103,7 @@ class Painter:
         for file in (asset_root() / 'creatures').glob('*.png'):
             self.creatures[file.stem] = pygame.image.load(str(file)).convert_alpha()
         self._scaled_creatures = {}
-        self.sky = pygame.Surface(window_size)
+        self.sky = pygame.Surface(view_size)
         for y in range(self.height):
             t = y / max(1, self.height)
             col = tuple(int(a + (b - a) * t) for a, b in zip(SKY_TOP, SKY_BOTTOM))
@@ -333,12 +333,13 @@ class Painter:
             pygame.draw.rect(screen, (56, 47, 38), (bx, 76, total, 14), border_radius=5)
             pygame.draw.rect(screen, (222, 125, 78), (bx, 76, int(total * b.hp/b.max_hp), 14), border_radius=5)
             text(screen, self.small, f'T-REX  {b.hp}/{b.max_hp}  / PHASE {b.phase}', (bx + total//2, 101), center=True)
-        bottom = pygame.Surface((self.width, 56), pygame.SRCALPHA)
-        bottom.fill((12, 30, 30, 215))
-        screen.blit(bottom, (0, self.height - 56))
+        # Opaque footer sits outside the game view, never over the terrain.
+        pygame.draw.rect(screen, (12, 30, 30),
+                         (0, self.height, self.width, settings.HUD_HEIGHT))
+        pygame.draw.rect(screen, (65, 102, 86), (0, self.height, self.width, 2))
         if control_preset is not None:
-            text(screen, self.small, control_preset.summary, (15, self.height - 49))
-            text(screen, self.small, control_preset.help_line, (15, self.height - 26),
+            text(screen, self.small, control_preset.summary, (15, self.height + 7))
+            text(screen, self.small, control_preset.help_line, (15, self.height + 30),
                  (184, 217, 199))
             if gamepad_connected:
                 text(screen, self.small, 'PAD', (self.width - 54, 13), (144, 224, 196))

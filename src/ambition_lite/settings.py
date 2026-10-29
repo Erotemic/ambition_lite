@@ -27,8 +27,10 @@ TREX_MAX_HP = 44  # from Ambition's trex_boss.ron
 ENEMY_NOTICE_RANGE = 370
 CONTACT_DAMAGE = 1
 
-# The camera, HUD, and audio use these dimensions.
-WINDOW_SIZE = (960, 540)
+# Keep world coordinates/camera unchanged when the desktop window is resized.
+VIEW_SIZE = (960, 540)
+HUD_HEIGHT = 56  # Dedicated footer below the game, not over the ground.
+WINDOW_SIZE = (VIEW_SIZE[0], VIEW_SIZE[1] + HUD_HEIGHT)
 FPS = 60
 
 

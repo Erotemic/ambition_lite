@@ -75,6 +75,11 @@ unmapped joysticks are not assigned guessed button numbers.
 `R` restarts the current room, `F2` opens the Pose Lab (`Tab` select,
 `[` / `]` rotate, `R` reset pose), `F3` toggles collision boxes, and
 `Esc` pauses/resumes. While paused, press `Q` to quit, or close the window.
+The controls HUD occupies its own strip **below** the gameplay view, so it
+never covers the ground. Drag any window edge or corner to resize the game;
+the 960x540 gameplay view and HUD scale together, maintaining their aspect
+ratio (with letterboxing when needed). Screenshots use the logical resolution
+of 960x596, independent of the desktop window size.
 The bottom-of-screen instructions update when you switch presets.
 
 Defeat the T-rex in the last room. Rooms are long, and the camera scrolls.

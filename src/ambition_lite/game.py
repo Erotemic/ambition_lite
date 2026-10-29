@@ -9,7 +9,19 @@ from .audio import Soundboard
 from .controls import ControlReader, KEY_NAMES
 from .gamepad import Gamepad
 from .graphics import Painter
+from .viewport import letterbox
 from .world import World
+
+
+def _present(window, canvas):
+    """Show a fixed-resolution game+HUD without distorting it on resize."""
+    x, y, width, height = letterbox(canvas.get_size(), window.get_size())
+    if width == 0 or height == 0:
+        return
+    window.fill((12, 30, 30))
+    image = canvas if (width, height) == canvas.get_size() else pygame.transform.smoothscale(
+        canvas, (width, height))
+    window.blit(image, (x, y))
 
 
 def run(args):
@@ -19,7 +31,10 @@ def run(args):
         os.environ.setdefault('SDL_AUDIODRIVER', 'dummy')
     pygame.mixer.pre_init(frequency=22050, size=-16, channels=1, buffer=512)
     pygame.init()
-    screen = pygame.display.set_mode(settings.WINDOW_SIZE)
+    screen = pygame.display.set_mode(settings.WINDOW_SIZE, pygame.RESIZABLE)
+    # Pygame 2 automatically resizes the display surface; the game canvas
+    # stays fixed so window resizing does not change physics or camera framing.
+    canvas = pygame.Surface(settings.WINDOW_SIZE).convert()
     pygame.display.set_caption('Ambition Lite - The Primeval Trail')
     clock = pygame.time.Clock()
     world = World(args.room)
@@ -92,13 +107,14 @@ def run(args):
             sounds.play(world.events)
             sounds.change_music('boss' if world.boss else 'primeval')
         painter.track(world, dt)
-        painter.render(screen, world, pose_lab=show_pose_lab,
+        painter.render(canvas, world, pose_lab=show_pose_lab,
                        pose_offsets=offsets, pose_bone=bones[selected],
                        control_preset=controls.preset, paused=paused,
                        gamepad_connected=pad.connected)
+        _present(screen, canvas)
         pygame.display.flip()
         if args.screenshot:
-            pygame.image.save(screen, args.screenshot)
+            pygame.image.save(canvas, args.screenshot)
             print('Wrote screenshot:', args.screenshot)
             break
     pygame.quit()
