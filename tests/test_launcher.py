@@ -77,3 +77,19 @@ def test_in_project_venv_installs_only_game_dependency(monkeypatch, tmp_path):
     launcher._prepare_graphics([])
     assert calls == [(([sys.executable, '-m', 'pip', 'install', 'pygame-ce>=2.5,<3'],),
                      {'check': True})]
+
+
+def test_graphical_screenshot_starts_without_a_desktop(tmp_path):
+    """Exercise real SDL startup/rendering, not only headless simulation."""
+    pytest.importorskip('pygame')
+    import os
+
+    screenshot = tmp_path / 'frame.png'
+    env = dict(os.environ, SDL_VIDEODRIVER='dummy', SDL_AUDIODRIVER='dummy')
+    result = subprocess.run(
+        [sys.executable, str(ROOT / 'main.py'), '--room', 'primeval_canopy',
+         '--mute', '--screenshot', str(screenshot)],
+        cwd=tmp_path, env=env, capture_output=True, text=True,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert screenshot.is_file()
